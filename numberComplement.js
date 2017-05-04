@@ -7,4 +7,4 @@ var findComplement = function(num) {
     return parseInt(number, 2);
 };
 
-console.log(findComplement(2));
+console.log(findComplement(5));
