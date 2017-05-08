@@ -3,9 +3,9 @@ const fizzBuzz = function (n) {
 
     for (let i = 1; i <= n; i++ ) {
         
-        if ( i % 3 === 0 && i % 5 !== 0) {
+        if ( i % 3 === 0) {
             data.push('Fizz');
-        } else if ( i % 5 === 0 && i % 3 !== 0) {
+        } else if ( i % 5 === 0) {
             data.push('Buzz');
         } else if ( i % 15 === 0 ) {
             data.push('FizzBuzz');
