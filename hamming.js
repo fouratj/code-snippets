@@ -1,4 +1,4 @@
-function padding(s, size) {
+function padding(s, size) { //harmonizes bit length to 32-bit 
     while (s.length < size) {
         s = "0" + s;
     }
