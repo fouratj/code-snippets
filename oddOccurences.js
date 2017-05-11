@@ -7,19 +7,17 @@
 const array = [9, 4, 9, 3, 9, 7, 7, 4];
 
 function solution(A) {
-    let ans, l = A.length;
+    let l = A.length;
 
     for (let i = 0; i < l; i++) {
         let current = A[i];
         let matching = A.filter( item => item === current);
 
-        if (matching.length === 1) {
-            ans = A[i];
-            break;
-        }
+        if (matching.length === 1) 
+            return current;
+        
     }
 
-    return ans;
 }
 
 console.log(solution(array));
