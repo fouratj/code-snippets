@@ -20,7 +20,8 @@ const empty = [];
 function solution (A, K) {
     let l = A.length, array = A;
 
-    if (l === 0) return -1;
+    if (l === 0) 
+        return -1;
 
     for (let i = 0; i < K; i++) {
         array.unshift(array.pop());
