@@ -37,7 +37,7 @@ const addTwoNumbers = function(l1, l2) {
 
         node.next = createList({}); //creates final null
         
-        return node;   //exits function
+        return node;
     }
     
     response = answer
