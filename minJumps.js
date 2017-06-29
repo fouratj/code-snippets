@@ -5,7 +5,6 @@
 // that, given three integers X, Y and D, returns the minimal number of jumps from position X to a position equal to or greater than Y.
 
 function solution(X, Y, D) {
-    // write your code in JavaScript (Node.js 6.4.0)
     let count = 0;
     
     if (X > Y ) return 0;
