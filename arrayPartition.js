@@ -4,11 +4,11 @@
 // large as possible.
 
 var arrayPairSum = function(nums) {
-    var arr = nums.sort((a,b) => ( a - b)), l = nums.length;
+    nums = nums.sort((a,b) => ( a - b)), l = nums.length;
     var myset = [];
     
     for (let i = 0; i < l; i+= 2) {
-        myset.push([arr[i], arr[i+1]]);
+        myset.push([nums[i], nums[i+1]]);
     }
     
     return myset
