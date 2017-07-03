@@ -3,13 +3,20 @@
 // Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
 // Output: 7 -> 0 -> 8
 
+function ListNode (val) {
+    this.val = val || '';
+    this.next = null;
+}
+
 const addTwoNumbers = function(l1, l2) {
+    console.log(l1);
+    console.log(l2);
     let answer = [], response = [];
     
     for (let i = 0; i < arguments.length; i++) {
         retrieveLinks(arguments[i]);
     }
-    
+
     function retrieveLinks (list, arr) {
         let array = arr || [];
         
@@ -23,12 +30,11 @@ const addTwoNumbers = function(l1, l2) {
         }
     }
 
-    function createList(node) {
-        
+    function createList() {
+    
         var x = response.splice(0, 1)[0];
-        
-        node.val = x;
-        node.next = { val: '', next: ''};
+        let node = new ListNode(x);
+        node.next = new ListNode();
 
         if (response.length === 0) {
             node.next = null;
@@ -39,7 +45,7 @@ const addTwoNumbers = function(l1, l2) {
         
         return node;
     }
-    
+
     response = answer
                 .map(item => parseInt(item))
                 .reduce( (pre, curr) => (pre + curr), 0)
@@ -47,8 +53,8 @@ const addTwoNumbers = function(l1, l2) {
                 .split('')
                 .reverse()
                 .map(item => parseInt(item));
-
-    let nodeList = createList({});
+    
+    let nodeList = createList();
     
     return nodeList;
 };
