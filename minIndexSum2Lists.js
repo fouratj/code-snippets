@@ -26,6 +26,7 @@ var findRestaurant = function(list1, list2) {
     
     for (let o in myobject) {
         if (myobject[o]["inBothLists"]) {
+            if (answers.length === 0) answers[0] = o + '-' + myobject[o];
             myobject[o] = myobject[o]["index"];
         } else {
             delete myobject[o];
@@ -33,7 +34,7 @@ var findRestaurant = function(list1, list2) {
     }
     
     for (let o in myobject) {
-        if (answers.length === 0) answers[0] = o + '-' + myobject[o]
+        
             
         if ((myobject[o] < parseInt(answers[0].split('-')[1])) ) {
             answers[0] = (o + '-' + myobject[o]);
