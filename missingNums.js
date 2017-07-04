@@ -11,23 +11,16 @@
 const nums = [4,3,2,7,8,2,3,1];
 
 var findDisappearedNumbers = function(nums) {
-    if (nums.length == 0) return [];
-    // nums = nums.filter( (item, inde, arr) => (inde == arr.indexOf(item)))
-    // console.log(nums)
-    let l = nums.length;
-    let myset = new Set(nums);
-    let results = [];
+    let l = nums.length,
+        myset = new Set(nums),
+        results = [];
 
     for (let i = 1; i < l; i++) {
-        let mybool = myset.has(i);
-
-        if (!mybool) {
+        if (!myset.has(i)) 
             results.push(i);
-        }
     }
 
     return results;
 }
 
 console.log(findDisappearedNumbers(nums));
-// console.log(findDisappearedNumbers([]));
