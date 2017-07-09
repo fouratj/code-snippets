@@ -12,30 +12,29 @@
 var findPairs = function(nums, k) {
     if (nums.length === 0) return 0;
     
-    let l = nums.length;
-    let pairs = new Set(), visited = new Set();
+    let l = nums.length, //cache array length
+        pairs = new Set(), // cache unique values that add upto k (1 + 3) & (3 + 1) only count as one
+        visited = new Set(); // cache already visited numbers in outer loop
     
-    nums = nums.sort( (a,b) => (a - b));
+    nums = nums.sort( (a,b) => (a - b)); // sort numbers so only specific range need be traversed at a time
             
     for (let i = 0; i < l; i++) {
         let curr = nums[i];
         
-        if (visited.has(curr)) continue;
-        for (let j = i + 1; j < l; j++) {
+        if (visited.has(curr)) continue; //if value has already been traversed, skips all further iteration for this value
 
+        for (let j = i + 1; j < l; j++) {
             let jurr = nums[j];            
             
-            if (curr - jurr > k) break;
+            if (curr - jurr > k) break; // once diff becomes greater than K, breaks inner loop
             
-                        
             if (Math.abs(curr - jurr) === k) 
                 pairs.add(curr + jurr);
 
         }
         
-        visited.add(curr);
+        visited.add(curr); //adds value to visited so never has to be repeated
     }
     
     return pairs.size;
-    
 };
