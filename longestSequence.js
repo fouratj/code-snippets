@@ -22,6 +22,7 @@ var findLHS = function(nums) {
     
     for (let i = 0; i < l; i++ ) {
         let curr = nums[i], answers = [];
+
         
         for (let j = i; j < l; j++ ) { //since loop is sorted, starts only at i saving compute cycles
             let jurr = nums[j];
@@ -35,8 +36,7 @@ var findLHS = function(nums) {
 
         if (answers.length > count && !answers.every(item => (item === answers[0])) ) //second conditional ensures there is at least one variant in the cycle, ie, not all the same
             count = answers.length;
-            
-        answers = [];
+        answers = []; 
     }
     
     return count;
