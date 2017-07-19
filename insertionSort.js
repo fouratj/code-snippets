@@ -34,14 +34,11 @@ function processData(input) {
                 } else {
                     arr[j] = curr;
                     break;
-                }
-                                
-            }
-            
+                }                   
+            }  
         }
         
-        console.log(...arr);
-          
+        console.log(...arr);    
     }
 } 
 
