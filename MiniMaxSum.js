@@ -14,7 +14,7 @@ function main(arr) {
         arr.push(temp); // put stored elem at end of array
     }
     
-    console.log(Math.min(...sums), Math.max(...sums)) ;
+    console.log(Math.min(...sums), Math.max(...sums));
 }
 
 main([1,2,3,4,5]);
