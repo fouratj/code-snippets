@@ -1,16 +1,3 @@
-function quickSort(arr) {
-  for (let i = 1; i < arr.length; i++) {
-    for (let j = 0; j < i; j++) {
-        if (arr[i] < arr[j]) {
-            const smaller = arr[i]
-            arr[i] = arr[j]
-            arr[j] = smaller
-        }
-    }
-  }
-  return arr
-}
-
 function sort(arr1, arr2) {
   arr1
   arr2
@@ -37,8 +24,8 @@ function mergeSort(arr) {
   const left = arr.slice(0, middle)
   const right = arr.slice(middle, arr.length)
 
-  const sortedLeft = quickSort(left)
-  const sortedRight = quickSort(right)
+  const sortedLeft = mergeSort(left)
+  const sortedRight = mergeSort(right)
   
   return sort(sortedLeft, sortedRight)
 }
