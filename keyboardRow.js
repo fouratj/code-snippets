@@ -12,9 +12,9 @@ var findWords = function(words) {
         if (arr.every(inTopRow) || arr.every(inMidRow) || arr.every(inBottomRow)) 
             answers.push(word);
     });
-
     return answers;
 };
 
 console.log(findWords(["Hello", "Alaska", "Dad", "Peace"]));
+console.log(findWords(['fourat1', 'fourat']))
 console.log(findWords(["a","b"]));
