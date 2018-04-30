@@ -1,11 +1,12 @@
 
 class Tree {
   constructor() {
-    this.root = null
+    this.root = null;
   }
+  
   add(value) {
     if (this.root === null) {
-      this.root = new Node(value)
+      this.root = new Node(value);
       return;
     }
     let current = this.root;
@@ -20,9 +21,9 @@ class Tree {
         }
       } else {
         if (current.right) {
-          current = current.right
+          current = current.right;
         } else {
-          current.right = new Node(value)
+          current.right = new Node(value);
           break;
         }
       }
@@ -32,16 +33,16 @@ class Tree {
 
 class Node {
   constructor(value, left=null, right=null) {
-    this.value = value
-    this.left = left
-    this.right = right
+    this.value = value;
+    this.left = left;
+    this.right = right;
   }
 }
 
-const tree = new Tree()
+const tree = new Tree();
 
-const nodes = [1, 2, 6, 3, 5, 8]
+const nodes = [1, 2, 6, 3, 5, 8];
 
-nodes.forEach(n => tree.add(n))
+nodes.forEach(n => tree.add(n));
 
-console.log(tree.root.right)
+console.log(tree.root.right);

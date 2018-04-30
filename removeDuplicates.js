@@ -8,10 +8,10 @@ let node = new ListNode(1);
 node.next = new ListNode(1);
 node.next.next = new ListNode(2);
 
- function ListNode(val) {
-     this.val = val;
-     this.next = null;
- }
+function ListNode(val) {
+    this.val = val;
+    this.next = null;
+}
 
 function buildNode (arr) {    
     let node = new ListNode(arr.shift());
