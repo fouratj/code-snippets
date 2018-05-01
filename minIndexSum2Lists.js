@@ -34,8 +34,6 @@ var findRestaurant = function(list1, list2) {
     }
     
     for (let o in myobject) {
-        
-            
         if ((myobject[o] < parseInt(answers[0].split('-')[1])) ) {
             answers[0] = (o + '-' + myobject[o]);
         } else if (myobject[o] === parseInt(answers[0].split('-')[1]) && o !== answers[0].split('-')[0] ) {

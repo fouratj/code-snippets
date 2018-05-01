@@ -30,8 +30,5 @@ function mergeSort(arr) {
   return sort(sortedLeft, sortedRight)
 }
 
-
-
-
 const array = mergeSort([1, 4, 78, 3, 8, 6, 5, 0, 10, 15]);
 console.log(array);

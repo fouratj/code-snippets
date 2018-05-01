@@ -1,6 +1,6 @@
 var findComplement = function(num) {
     var number = (num >>> 0).toString(2)
-                            .split("")
+                            .split('')
                             .map( item => ((item === '0') ? '1' : '0'))
                             .join('');
     
@@ -8,3 +8,4 @@ var findComplement = function(num) {
 };
 
 console.log(findComplement(5));
+console.log(findComplement(15));
