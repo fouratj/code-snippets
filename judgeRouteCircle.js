@@ -12,7 +12,8 @@
  * @return {boolean}
 */
 var judgeCircle = function (moves) {
-  let initialPos = [0, 0]
+  let initialPos = [0, 0];
+
   moves.split('').forEach(m => {
     switch (m) {
       case 'U':
