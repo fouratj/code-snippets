@@ -26,11 +26,12 @@ var findPairs = function(nums, k) {
         for (let j = i + 1; j < l; j++) {
             let jurr = nums[j];            
             
-            if (curr - jurr > k) break; // once diff becomes greater than K, breaks inner loop
-            
-            if (Math.abs(curr - jurr) === k) 
+            if (curr - jurr > k) { // once diff becomes greater than K, breaks inner loop
+                break;
+            }
+            if (Math.abs(curr - jurr) === k) {
                 pairs.add(curr + jurr);
-
+            }
         }
         
         visited.add(curr); //adds value to visited so never has to be repeated
