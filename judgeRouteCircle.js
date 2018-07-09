@@ -10,8 +10,8 @@
 /**
  * @param {string} moves
  * @return {boolean}
-*/
-var judgeCircle = function (moves) {
+ */
+var judgeCircle = function(moves) {
   let initialPos = [0, 0];
 
   moves.split('').forEach(m => {

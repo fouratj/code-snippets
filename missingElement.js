@@ -2,17 +2,18 @@
 // Your goal is to find that missing element.
 
 function solution(A) {
-    let l = A.length;
+  let l = A.length;
 
-    if (A.length === 0) return -1;
-    
-    for (let i = 1; i <= l; i++) {
-        let curr = A[i], pre = A[i - 1];
+  if (A.length === 0) return -1;
 
-        if (curr - pre !== 1) {
-            return curr - 1;
-        }
+  for (let i = 1; i <= l; i++) {
+    let curr = A[i],
+      pre = A[i - 1];
+
+    if (curr - pre !== 1) {
+      return curr - 1;
     }
+  }
 }
 
-console.log(solution([1,2,3,4,5,7]))
+console.log(solution([1, 2, 3, 4, 5, 7]));

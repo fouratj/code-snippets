@@ -5,16 +5,16 @@
 // that, given three integers X, Y and D, returns the minimal number of jumps from position X to a position equal to or greater than Y.
 
 function solution(X, Y, D) {
-    let count = 0;
-    
-    if (X > Y ) return 0;
-    
-    while ( X < Y) {
-        X = X + D;
-        count++;
-    }
-    
-    return count;
+  let count = 0;
+
+  if (X > Y) return 0;
+
+  while (X < Y) {
+    X = X + D;
+    count++;
+  }
+
+  return count;
 }
 
 console.log(solution(10, 0, 30));

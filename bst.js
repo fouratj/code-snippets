@@ -1,9 +1,8 @@
-
 class Tree {
   constructor() {
     this.root = null;
   }
-  
+
   add(value) {
     if (this.root === null) {
       this.root = new Node(value);
@@ -11,7 +10,7 @@ class Tree {
     }
     let current = this.root;
 
-    while(true) {
+    while (true) {
       if (current.value > value) {
         if (current.left) {
           current = current.left;
@@ -32,7 +31,7 @@ class Tree {
 }
 
 class Node {
-  constructor(value, left=null, right=null) {
+  constructor(value, left = null, right = null) {
     this.value = value;
     this.left = left;
     this.right = right;

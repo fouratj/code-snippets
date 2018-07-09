@@ -1,4 +1,4 @@
-// Codility 
+// Codility
 
 // Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
 // Find all the elements of [1, n] inclusive that do not appear in this array.
@@ -8,19 +8,18 @@
 // Status: Accepted
 // Runtime: 302 ms
 
-const nums = [4,3,2,7,8,2,3,1];
+const nums = [4, 3, 2, 7, 8, 2, 3, 1];
 
 var findDisappearedNumbers = function(nums) {
-    let l = nums.length,
-        myset = new Set(nums),
-        results = [];
+  let l = nums.length,
+    myset = new Set(nums),
+    results = [];
 
-    for (let i = 1; i < l; i++) {
-        if (!myset.has(i)) 
-            results.push(i);
-    }
+  for (let i = 1; i < l; i++) {
+    if (!myset.has(i)) results.push(i);
+  }
 
-    return results;
-}
+  return results;
+};
 
 console.log(findDisappearedNumbers(nums));

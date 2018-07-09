@@ -10,26 +10,26 @@
  * @param {number} left
  * @param {number} right
  * @return {number[]}
-*/
-var selfDividingNumbers = function (left, right) {
-    const nums = [];
+ */
+var selfDividingNumbers = function(left, right) {
+  const nums = [];
 
-    const isSelfDividing = (num) => {
-        const numbers = num.toString().split('');
-        if (numbers.includes('0')) {
-            return false;
-        }
-
-        return numbers.every(n => num % parseInt(n, 10) === 0);
+  const isSelfDividing = num => {
+    const numbers = num.toString().split('');
+    if (numbers.includes('0')) {
+      return false;
     }
 
-    for (let i = left; i <= right; i++) {
-        if (isSelfDividing(i)) {
-            nums.push(i);
-        }
-    }
+    return numbers.every(n => num % parseInt(n, 10) === 0);
+  };
 
-    return nums;
+  for (let i = left; i <= right; i++) {
+    if (isSelfDividing(i)) {
+      nums.push(i);
+    }
+  }
+
+  return nums;
 };
 
 console.log(selfDividingNumbers(1, 22));
